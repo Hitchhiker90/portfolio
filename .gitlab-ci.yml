@@ -24,6 +24,6 @@ test-job2:
 deploy-prod:
     stage: deploy
     script:
-        - touch /home/hitchhiker90/deployment_test
+        - touch /home/lukasz/deployment_test
     only:
         - master
