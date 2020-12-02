@@ -24,6 +24,6 @@ test-job2:
 deploy-prod:
     stage: deploy
     script:
-        - docker-compose up --build
+        - touch /home/hitchhiker90/deployment_test
     only:
         - master
