@@ -29,6 +29,7 @@ release:
     services:
         - docker:dind
     script:
+        - echo $CI_REGISTRY
         - docker build -t $TAG_COMMIT_PROXY -t $TAG_LATEST_PROXY ./proxy
         - docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY
         - docker push $TAG_COMMIT_PROXY
