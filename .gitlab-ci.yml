@@ -21,7 +21,7 @@ test-job1:
 test-job2:
     stage: test
     script:
-        - echo "This job tests something too."
+        - echo "This job tests something too!"
 
 release:
     image: docker:latest
