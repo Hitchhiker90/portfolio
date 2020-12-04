@@ -45,10 +45,10 @@ deploy:
         - apt update && apt install openssh-client -y
         - echo $SERVER_USER@$SERVER_IP
         - echo $ID_RSA
-        - scp -i $ID_RSA -o StrictHostKeyChecking=no docker-compose.yml $SERVER_USER@$SERVER_IP:/srv/portfolio/
-        - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd /srv/portfolio"
-        - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
-        - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker-compose up --build -d"
+        - scp -b 4096 -i $ID_RSA -o StrictHostKeyChecking=no docker-compose.yml $SERVER_USER@$SERVER_IP:/srv/portfolio/
+        - ssh -b 4096 -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd /srv/portfolio"
+        - ssh -b 4096 -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
+        - ssh -b 4096 -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker-compose up --build -d"
     environment:
         name: production
         url: http://161.35.167.110
