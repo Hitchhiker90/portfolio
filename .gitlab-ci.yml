@@ -46,7 +46,7 @@ deploy:
         - scp -i $ID_RSA -o StrictHostKeyChecking=no docker-compose.yml $SERVER_USER@$SERVER_IP:/srv/portfolio
         - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "docker login -u gitlab-ci-token -p $CI_BUILD_TOKEN $CI_REGISTRY"
         - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "cd /srv/portfolio &&
-                                                                              docker pull TAG_LATEST_PROXY &&
+                                                                              docker pull $TAG_LATEST_PROXY &&
                                                                               docker-compose up --no-build -d"
 
     environment:
