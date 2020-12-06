@@ -4,6 +4,7 @@ services:
     
     proxy:
         image: registry.gitlab.com/hitchhiker90/portfolio/master/proxy
+        build: ./proxy/
         volumes:
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/www:/var/www/certbot
@@ -24,6 +25,7 @@ services:
     
     evac-sim:
         image: registry.gitlab.com/hitchhiker90/evacuation-simulation/main/evac-sim:latest
+        build: ../evacuation-simulation/
         networks:
             - evac-sim_net
 
