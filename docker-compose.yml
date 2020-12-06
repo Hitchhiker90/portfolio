@@ -18,7 +18,11 @@ services:
         image: httpd:2.4
         networks:
             - site_net
-
+    
+    evac-sim:
+        image: registry.gitlab.com/hitchhiker90/evacuation-simulation/main/evac-sim:latest
+        networks:
+            - evac-sim_net
 
 networks:
     site_net:
