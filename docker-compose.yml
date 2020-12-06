@@ -13,6 +13,9 @@ services:
         networks:
             - site_net
             - evac-sim_net
+        depends_on:
+            - web
+            - evac-sim
 
     web:
         image: httpd:2.4
