@@ -3,8 +3,7 @@ version: "3.8"
 services:
     
     proxy:
-        image: proxy
-        build: ./proxy
+        image: registry.gitlab.com/hitchhiker90/portfolio/master/proxy
         volumes:
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/www:/var/www/certbot
