@@ -12,6 +12,7 @@ services:
             - "443:443"
         networks:
             - site_net
+            - evac-sim_net
 
     web:
         image: httpd:2.4
@@ -21,3 +22,4 @@ services:
 
 networks:
     site_net:
+    evac-sim_net:
