@@ -3,7 +3,7 @@ version: "3.8"
 services:
     
     proxy:
-        image: registry.gitlab.com/hitchhiker90/portfolio/master/proxy
+        image: registry.gitlab.com/hitchhiker90/portfolio/master/proxy:latest
         volumes:
             - ./certbot/conf:/etc/letsencrypt
             - ./certbot/www:/var/www/certbot
@@ -14,11 +14,11 @@ services:
             - site_net
             - evac-sim_net
         depends_on:
-            - web
+            - site
             - evac-sim
 
-    web:
-        image: httpd:2.4
+    site:
+        image: registry.gitlab.com/hitchhiker90/portfolio/master/site:latest
         networks:
             - site_net
     
