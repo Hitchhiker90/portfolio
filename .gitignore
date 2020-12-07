@@ -5,4 +5,4 @@ certbot/
 proxy/local.conf
 
 # local docker-compose configuration
-proxy/docker-compose.dev.yml
+docker-compose.dev.yml
