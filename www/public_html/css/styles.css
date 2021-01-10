@@ -1,0 +1,393 @@
+body {
+    margin: 0px;
+    overflow-y: scroll;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+header {
+    display: grid;
+    grid-template-columns: 3fr 5fr 2fr;
+    background: #1b1b1b;
+    border-bottom: 1px solid #7FA0EC;
+    color: #7FA0EC;
+    z-index: 100;
+}
+
+h1 {
+    font-family: 'Spartan', sans-serif;
+    font-weight: 800;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    color: unset;
+    text-decoration: unset;
+}
+
+
+header > h1 {
+    font-size: 36px;
+    grid-column: 2;
+    margin-top: 8px;
+    max-width: 350px;
+}
+
+#header-name,
+#mobile-aside-name {
+    display: inline-block;
+}
+
+#desktop-header-icons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    height: 50px;
+    align-items: center;
+    align-content: center;
+}
+
+.icon {
+    width: 30px;
+    display: inline-block;
+}
+
+svg.desktop-header-icon {
+    stroke:#1b1b1b;
+    fill: #7FA0EC;
+}
+
+svg.icon:hover {
+    transition: 0.5s;
+    fill: white;
+}
+
+#mail-icon {
+    width: 30px;
+}
+
+aside {
+    padding: 0px;
+    background: #7FA0EC;
+    z-index: 100;
+}
+
+aside h1 {
+    margin: 25px 10px 10px 10px;
+    padding: 1px 30px;
+}
+
+aside h2,
+aside p {
+    margin: 0px 0px 10px 0px;
+    padding: 1px 30px;
+}
+
+.project-name {
+    padding-top: 10px;
+}
+
+.section-title {
+    font-size: 28px;
+}
+
+#project-overview-name {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+    font-size: 36px;
+    margin: 0px;
+    padding: 3px;
+    top: -44px;
+    background-color: #1C2336;
+}
+
+.project {
+    width: 100%;
+    margin: 0px;
+}
+
+.project:hover {
+   color: white; 
+}
+
+.project-techs {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.project-desc {
+    padding-bottom: 15px;
+}
+
+.active-project {
+    background: #1C2336;
+    color: white;
+}
+
+main {
+    grid-column: 2;
+    padding: 10px;
+    background: #1C2336;
+    padding: 10px;
+    color: white;
+}
+
+.project-overview {
+    margin: 70px;
+    padding: 20px;
+    border: 1px solid #7FA0EC;
+}
+
+.project-img {
+    min-width: 320px;
+    max-width: 400px;
+}
+
+#desktop-overview-btns {
+    display: flex;
+    justify-content: space-evenly;
+    height: 36px;
+    padding: 8px 0px 5px 0px;
+}
+
+.btn {
+    transition: 1s;
+    border: 0px;
+    font: unset;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 240px;
+    height: 42px;
+    border-radius: 10px;
+    background: #7FA0EC;
+    color: #1C2336;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:hover {
+    transition: 0.5s;
+    background-color: white;
+}
+
+.btn-txt {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Spartan', sans-serif;
+    font-size: 13px;
+}
+
+
+/* General mobile device rules (min. considered width: 280px) */
+@media screen and (max-width: 600px) {
+    
+    .desktop {
+        display: none!important;
+    }
+    
+    body {
+        min-width: 280px;
+    }
+    
+    .container {
+        min-width: 280px;
+        width: 100vw;
+        display: block;
+    }
+    
+    header,
+    #aside-header {
+        display: grid;
+        width: 100%;
+        height: 10vw;
+        grid-template-columns: 12fr 2fr;
+    }
+    
+    header > h1 {
+        margin-left: 5vw;
+        margin-top: 10px;
+        grid-column: 1;
+        font-size: 6vw;
+    }
+    
+    #mobile-header-icons,
+    #aside-close-icons {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        height: 10vw;
+        width: 50px;
+        align-items: center;
+        align-content: center;
+    }
+    
+    #aside-close-icon {
+        width: 25px;
+    }
+    
+    #mobile-aside-footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        height: 50px;
+        align-items: center;
+        align-content: center;
+        border-top: 1px solid #1b1b1b;
+    }
+    
+    aside {
+        display: block;
+        position: absolute;
+        top: 0px;
+        width: 100vw;
+        min-height: 100%;
+        min-width: inherit;
+        transform: translateX(-100%);
+        transition-duration: 0.5s;
+    }
+    
+    aside.show {
+        transform: translateX(0);
+    }
+    
+    aside h1,
+    aside h2,
+    aside p {
+        padding: 1px 5vw;
+    }
+    
+    #mobile-aside-name {
+        margin: 10px 0px 10px 5vw;
+        padding: 0px;
+        font-size: 6vw;
+    }
+    
+    #projects {
+        padding-bottom: 50px;
+    }
+
+    main {
+        margin: 0px;
+        padding-top: 10vw;
+    }
+    
+    main.scroll-blocked {
+        position: fixed;
+        overflow-y: hidden;
+    }
+    
+    .project-overview {
+        margin: auto;
+        margin-top: 20px;
+        max-width: 90%;
+    }
+    
+    #project-overview-name {
+        font-size: 24px;
+        top: -39px;
+    }
+    
+    #mobile-overview-imgs-top {
+        margin-top: -25px;
+    }
+    
+    .project-img {
+        width: 100%;
+        min-width: 200px;
+        max-width: none;
+    }
+    
+    #mobile-overview-btns {
+        display: flex;
+        height: 100px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0px 0px 0px;
+    }
+    
+}
+
+
+/* Smallest mobile devices */
+@media screen and (max-width: 400px) {
+
+    header {
+        height: 14vw;
+    }
+
+    header > h1 {
+        font-size: 8vw;
+    }
+
+    #mobile-aside-name {
+        font-size: 8vw;
+    }
+
+    #mobile-header-icons,
+    #aside-close-icons {
+        height: 14vw;
+    }
+    
+    #project-overview-name {
+        font-size: 17px;
+        top: -32px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+}
+
+
+/* Devices larger than mobile */
+@media screen and (min-width: 601px) {
+    
+    .mobile {
+        display: none;
+    }
+    
+    .container {
+        min-width: 1000px;
+        display: grid;
+        grid-template-rows: 50px 1fr;
+        grid-template-columns: 2fr 5fr;
+    }
+    
+    header {
+        grid-column: span 2;
+    }
+
+    #header-name {
+        max-width: 300px;
+    }
+
+    aside {
+        grid-column: 1;
+    }
+
+    .project {
+        padding: 1px;
+    }
+    
+}
