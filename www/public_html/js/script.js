@@ -6,7 +6,14 @@ window.onload = function() {
     for (var i = 0; i < projects.length; i++) {
         projects[i].addEventListener("click", selectProject);
     }
+
+    var imgs = document.getElementsByClassName("project-img")
+    
+    for (var i = 0; i < imgs.length; i++) {
+        imgs[i].addEventListener("click", openImgPreview);
+    }
 }
+
 
 function toggleAside() {
 
@@ -23,6 +30,7 @@ function toggleAside() {
     }
 }
 
+
 function selectProject() {
 
     var projects = document.getElementsByClassName("project")
@@ -32,4 +40,19 @@ function selectProject() {
     }
 
     this.classList.add("active-project");
+}
+
+
+function openImgPreview() {
+    var imgSrc = this.src;
+    var imgPreviewScreen = document.getElementById("img-preview-screen");
+    var imgPreview = document.getElementById("img-preview");
+    imgPreview.src = imgSrc;
+    imgPreviewScreen.addEventListener("click", closeImgPreview)
+    imgPreviewScreen.classList.remove("hidden");
+}
+
+
+function closeImgPreview() {
+    this.classList.add("hidden");
 }

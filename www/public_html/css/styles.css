@@ -10,6 +10,33 @@ body {
     user-select: none; 
 }
 
+#img-preview-screen {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: auto;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    vertical-align: middle;
+}
+
+#img-preview-screen.hidden {
+    display: none;
+}
+
+#img-preview {
+    display: block;
+    position: relative;
+    max-width: 99%;
+    max-height: 90%;
+    margin: auto;
+}
+
 header {
     display: grid;
     grid-template-columns: 3fr 5fr 2fr;
@@ -144,14 +171,10 @@ main {
 }
 
 .project-overview {
-    margin: 70px;
+    width: 80%;
+    margin: 70px auto;
     padding: 20px;
     border: 1px solid #7FA0EC;
-}
-
-.project-img {
-    min-width: 320px;
-    max-width: 400px;
 }
 
 #desktop-overview-btns {
@@ -197,7 +220,8 @@ main {
 /* General mobile device rules (min. considered width: 280px) */
 @media screen and (max-width: 600px) {
     
-    .desktop {
+    .desktop,
+    #desktop-overview-imgs {
         display: none!important;
     }
     
@@ -371,7 +395,7 @@ main {
         min-width: 1000px;
         display: grid;
         grid-template-rows: 50px 1fr;
-        grid-template-columns: 2fr 5fr;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 5fr);
     }
     
     header {
@@ -389,5 +413,21 @@ main {
     .project {
         padding: 1px;
     }
-    
+
+    #desktop-overview-imgs {
+        margin-top: -32px;
+        max-width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .project-img {
+        box-sizing: border-box;
+        min-width: 0px;
+        max-width: 400px;
+        height: 9vw;
+        min-height: 90px;
+        border: 1px solid #7FA0EC;
+    }
+
 }
