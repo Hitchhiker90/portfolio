@@ -124,7 +124,7 @@ aside p {
 }
 
 .aside-desc {
-    padding-bottom: 15px;
+    padding-bottom: 5px;
 }
 
 .project-name {
@@ -184,7 +184,7 @@ main {
 
 #project-overview {
     width: 80%;
-    margin: 65px auto 55px auto;
+    margin: 65px auto 50px auto;
     padding: 20px;
     border: 1px solid #7FA0EC;
 }
