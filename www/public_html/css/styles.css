@@ -10,6 +10,10 @@ body {
     user-select: none; 
 }
 
+.container {
+    min-height: 100vh;
+}
+
 #img-preview-screen {
     position: fixed;
     display: flex;
@@ -119,6 +123,10 @@ aside p {
     padding: 1px 30px;
 }
 
+.aside-desc {
+    padding-bottom: 15px;
+}
+
 .project-name {
     padding-top: 10px;
 }
@@ -154,7 +162,11 @@ aside p {
 }
 
 .project-desc {
-    padding-bottom: 15px;
+    margin: 12px 0px;
+}
+
+.project-desc + h2 {
+    padding-top: 5px;
 }
 
 .active-project {
@@ -170,11 +182,15 @@ main {
     color: white;
 }
 
-.project-overview {
+#project-overview {
     width: 80%;
-    margin: 70px auto;
+    margin: 65px auto 55px auto;
     padding: 20px;
     border: 1px solid #7FA0EC;
+}
+
+.preload {
+    transition: none!important;
 }
 
 #desktop-overview-btns {
@@ -319,7 +335,7 @@ main {
         overflow-y: hidden;
     }
     
-    .project-overview {
+    #project-overview {
         margin: auto;
         margin-top: 20px;
         max-width: 90%;
@@ -412,6 +428,15 @@ main {
 
     .project {
         padding: 1px;
+    }
+
+    #project-overview {
+        transition: 1s;
+    }
+
+    #project-overview.hidden {
+        opacity: 0;
+        transition: 250ms;
     }
 
     #desktop-overview-imgs {

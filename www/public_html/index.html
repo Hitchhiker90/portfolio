@@ -60,7 +60,7 @@
                 <img id="menu-icon" class="icon mobile-header-icon" src="assets/hamburger_light.png">
             </div>
         </header>
-        <aside id="sidebar">
+        <aside id="sidebar" class="preload">
             <section id="aside-header" class="mobile">
                 <h1 id="mobile-aside-name">Łukasz Przybyła</h1>
                 <div id="aside-close-icons" class="mobile">
@@ -75,44 +75,29 @@
             </section>
             <section id="projects" class="aside-section">
                 <h1 class="section-title">Projects</h1>
-                <article class="project active-project">
-                    <h2 class="project-name">Evacuation Sim.</h2>
-                    <p class="project-techs">Python - JavaScript</p>
-                    <p class="aside-desc project-desc">Agent-based simulation of an evacuation process of a residential building.</p>
-                </article>
-                <article class="project">
-                    <h2 class="project-name">Project 2</h2>
-                    <p class="project-techs">Technology 1 - Technology 2 - Technology 3</p>
-                    <p class="aside-desc project-desc">A very brief description of the project, summarizing the main point in about two lines.</p>
-                </article>
-                <article class="project">
-                    <h2 class="project-name">Project 3</h2>
-                    <p class="project-techs">Technology 1 - Technology 2 - Technology 3</p>
-                    <p class="aside-desc project-desc">A very brief description of the project, summarizing the main point in about two lines.</p>
-                </article>
-                    <footer id="mobile-aside-footer" class="mobile">
-                    <a class="icon" href="https://github.com/Hitchhiker90" target="_blank">
-                        <svg id="github-icon" class="icon mobile-aside-icon" version="1.1" width="30" height="30" viewBox="0 0 24 24">
-                            <use xlink:href="#github-svg" />
-                        </svg>
-                    </a>
-                    <a class="icon" href="https://www.linkedin.com/in/lukasz-przybyla" target="_blank">
-                        <svg id="linkedin-icon" class="icon mobile-aside-icon" version="1.1" width="30" height="30" viewBox="0 0 24 24">
-                            <use xlink:href="#linkedin-svg" />
-                        </svg>
-                    </a>
-                    <a class="icon" href="mailto:l.przybyla90@gmail.com" target="_blank">
-                        <svg id="mail-icon" class="icon mobile-aside-icon" version="1.1" width="30" height="27" viewBox="0 0 125 70">
-                            <use xlink:href="#mail-svg-1" />
-                            <use xlink:href="#mail-svg-2" />
-                        </svg>
-                    </a>
-                </footer>
             </section>
+            <footer id="mobile-aside-footer" class="mobile">
+            <a class="icon" href="https://github.com/Hitchhiker90" target="_blank">
+                    <svg id="github-icon" class="icon mobile-aside-icon" version="1.1" width="30" height="30" viewBox="0 0 24 24">
+                        <use xlink:href="#github-svg" />
+                    </svg>
+                </a>
+                <a class="icon" href="https://www.linkedin.com/in/lukasz-przybyla" target="_blank">
+                    <svg id="linkedin-icon" class="icon mobile-aside-icon" version="1.1" width="30" height="30" viewBox="0 0 24 24">
+                        <use xlink:href="#linkedin-svg" />
+                    </svg>
+                </a>
+                <a class="icon" href="mailto:l.przybyla90@gmail.com" target="_blank">
+                    <svg id="mail-icon" class="icon mobile-aside-icon" version="1.1" width="30" height="27" viewBox="0 0 125 70">
+                        <use xlink:href="#mail-svg-1" />
+                        <use xlink:href="#mail-svg-2" />
+                    </svg>
+                </a>
+            </footer>
         </aside>
         <main class="">
-            <article class="project-overview">
-                <h1 id="project-overview-name" class="project-name">Evacuation Simulation</h1>
+            <article id="project-overview" class="hidden preload">
+                <h1 id="project-overview-name" class="project-name"></h1>
                 <section id="desktop-overview-imgs" class="desktop">
                     <img src="assets/project1_1.png" alt="" id="project-img1" class="project-img">
                     <img src="assets/project1_2.png" alt="" id="project-img2" class="project-img">
@@ -121,43 +106,24 @@
                 </section>
                 <section id="mobile-overview-imgs-top" class="mobile mobile-overview-imgs">
                     <img src="assets/project1_1.png" alt="" id="project-img1" class="project-img">
-                    <section id="mobile-overview-btns">
-                        <a class="btn-link" href="/evac-sim" target="_blank">
-                            <button id="mobile-demo-btn" class="btn">
-                                <img src="assets/demo_dark.svg" id="mobile-demo-btn-icon" class="btn-icon mobile">
-                                <p id="mobile-demo-btn-txt" class="btn-txt">See a live demo</p>
-                            </button>
-                        </a>
-                        <a class="btn-link" href="https://github.com/Hitchhiker90/evacuation-simulation" target="_blank">
-                            <button id="mobile-github-btn" class="btn">
-                                <svg id="mobile-github-btn-icon" class="btn-icon mobile" version="1.1" width="30" height="30" viewBox="0 0 24 24">
-                                    <use xlink:href="#github-svg" />
-                                </svg>
-                                <p id="mobile-github-btn-txt" class="btn-txt">See the GitHub repo</p>
-                            </button>
-                        </a>
-                    </section>
+                </section>
+                <section id="mobile-overview-btns" class="mobile">
+                    <a class="btn-link demo-link" href="/evac-sim" target="_blank">
+                        <button id="mobile-demo-btn" class="btn">
+                            <img src="assets/demo_dark.svg" id="mobile-demo-btn-icon" class="btn-icon mobile">
+                            <p id="mobile-demo-btn-txt" class="btn-txt">See a live demo</p>
+                        </button>
+                    </a>
+                    <a class="btn-link github-link" href="https://github.com/Hitchhiker90/evacuation-simulation" target="_blank">
+                        <button id="mobile-github-btn" class="btn">
+                            <svg id="mobile-github-btn-icon" class="btn-icon mobile" version="1.1" width="30" height="30" viewBox="0 0 24 24">
+                                <use xlink:href="#github-svg" />
+                            </svg>
+                            <p id="mobile-github-btn-txt" class="btn-txt">See the GitHub repo</p>
+                        </button>
+                    </a>
                 </section>
                 <section id="project-overview-desc">
-                    <p class="main-desc project-desc">
-                        This application was developed for my <b>MSc project</b>, as part of my degree programme at the <b>University of Liverpool</b> in Summer 2020.
-                    </p>
-                    <p class="main-desc project-desc">
-                        The purpose of the project was to design and development of a web application capable of simulating an evacuation process of a residential building. The application allows the specification of the number and type of residents and facilitate visualisations of individual evacuation events, as well as scheduling batches of simulations.
-                    </p>
-
-                    <p class="main-desc project-desc">
-                        The back end (simulation environment and agent logic) was implemented using <b>Python 3.7</b>, with the help of <b>Mesa</b>, an agent-based modelling library for Python. The front end consists of a GUI and visuals developed in <b>JavaScript</b>, created by modifying and extending the existing canvas-based visualisation capabilities of Mesa.
-                    </p>
-                    <h2>
-                        Features
-                    </h2>    
-                    <p class="main-desc project-desc">
-                        The application allows the user to select an environment in the form of a building plan with specified rooms, corridors, exits and signs pointing to the exits, as well as obstacles, place a number of agents of different types within the environment (by specifying population parameters as well as individually) and simulate the evacuation process. The application also supports explicit simulation of fire and smoke that have effect on the evacuating agents.
-                    </p>
-                    <p class="main-desc project-desc">
-                        The simulation is <b>agent-based</b>, with the behaviour of each agent defined independently, based on their type, parameters, state, preferred strategy and what they can perceive in the environment. The agents can belong to different age groups (children, adults, elderly) and different levels of mobility (people with lower fitness and with reduced mobility). Different groups are characterised by different walking speeds and, in the case of children, entirely different behaviour logic.
-                    </p>
                 </section>
                 <section id="mobile-overview-imgs-bottom" class="mobile mobile-overview-imgs">
                     <img src="assets/project1_2.png" alt="" id="project-img2" class="project-img">
@@ -165,13 +131,13 @@
                     <img src="assets/project1_4.png" alt="" id="project-img4" class="project-img">
                 </section>
                 <section id="desktop-overview-btns" class="desktop">
-                    <a class="btn-link" href="/evac-sim" target="_blank">
+                    <a class="btn-link demo-link" href="/evac-sim" target="_blank">
                         <button id="desktop-demo-btn" class="btn">
                             <img src="assets/demo_dark.svg" id="desktop-demo-btn-icon" class="btn-icon">
                             <p id="desktop-demo-btn-txt" class="btn-txt">See a live demo</p>
                         </button>
                     </a>
-                    <a class="btn-link" href="https://github.com/Hitchhiker90/evacuation-simulation" target="_blank">
+                    <a class="btn-link github-link" href="https://github.com/Hitchhiker90/evacuation-simulation" target="_blank">
                         <button id="desktop-github-btn" class="btn">
                             <svg id="github-icon" class="btn-icon" version="1.1" width="30" height="30" viewBox="0 0 24 24">
                                 <use xlink:href="#github-svg" />
