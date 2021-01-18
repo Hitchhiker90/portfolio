@@ -87,6 +87,12 @@ async function selectProject(target, projectDict) {
         sidebar.classList.remove("show");
         main[0].classList.remove("scroll-blocked");
     }
+    
+    for (var i = window.scrollY; i >= 0; i -= 8) {
+        window.scrollTo(0, i);
+        await new Promise(r => setTimeout(r, 1));
+    }
+    window.scrollTo(0, 0);
 
     // On desktop, phase out the previous contents and wait for the transition to complete
     if (window.visualViewport.width >= 601) {
