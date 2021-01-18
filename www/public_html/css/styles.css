@@ -43,7 +43,7 @@ body {
 
 header {
     display: grid;
-    grid-template-columns: 3fr 5fr 2fr;
+    grid-template-columns: 8fr 2fr;
     background: #1b1b1b;
     border-bottom: 1px solid #7FA0EC;
     color: #7FA0EC;
@@ -67,9 +67,10 @@ a {
 
 
 header > h1 {
-    font-size: 36px;
-    grid-column: 2;
+    font-size: 32px;
+    grid-column: 1;
     margin-top: 8px;
+    margin-left: 38px;
     max-width: 350px;
 }
 
@@ -79,6 +80,7 @@ header > h1 {
 }
 
 #desktop-header-icons {
+    grid-column: 2;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -149,6 +151,7 @@ aside p {
 .project {
     width: 100%;
     margin: 0px;
+    padding: 1px;
 }
 
 .project:hover {
@@ -184,7 +187,7 @@ main {
 
 #project-overview {
     width: 80%;
-    margin: 65px auto 50px auto;
+    margin: 60px auto 50px auto;
     padding: 20px;
     border: 1px solid #7FA0EC;
 }
@@ -389,7 +392,7 @@ main {
     }
     
     #project-overview-name {
-        font-size: 17px;
+        font-size: 16px;
         top: -32px;
     }
 
@@ -424,10 +427,6 @@ main {
 
     aside {
         grid-column: 1;
-    }
-
-    .project {
-        padding: 1px;
     }
 
     #project-overview {
