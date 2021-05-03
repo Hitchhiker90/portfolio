@@ -1,8 +1,15 @@
+# Dev-specific files
+*.dev
+*.dev.*
+
 # SSL certificates
 certbot/
 
 # localhost proxy settings
 proxy/local.conf
 
-# local docker-compose configuration
-docker-compose.dev.yml
+# Project settings
+.project
+.idea/
+
+__pycache__/

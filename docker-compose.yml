@@ -13,9 +13,11 @@ services:
         networks:
             - site_net
             - evac-sim_net
+            - oxford-talks_net
         depends_on:
             - site
             - evac-sim
+            - oxford-talks
 
     site:
         image: registry.gitlab.com/hitchhiker90/portfolio/master/site:latest
@@ -27,8 +29,29 @@ services:
         networks:
             - evac-sim_net
 
+    oxford-talks:
+        image: registry.gitlab.com/hitchhiker90/oxford-talks/main/oxford-talks:latest
+        environment:
+            - POSTGRESQL_HOST
+            - POSTGRESQL_DB_NAME
+            - POSTGRESQL_USERNAME
+            - POSTGRESQL_PASSWORD
+        networks:
+            - oxford-talks_net
+        depends_on:
+            - postgresql-event-db
+
+    postgresql-event-db:
+        image: postgres:13.2
+        volumes:
+            - /srv/data/talks_db/:/var/lib/postgresql/data
+        networks:
+            - oxford-talks_net
+
 networks:
     site_net:
         name: site_net
     evac-sim_net:
         name: evac-sim_net
+    oxford-talks_net:
+        name: oxford-talks_net
