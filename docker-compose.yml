@@ -36,6 +36,8 @@ services:
             - POSTGRESQL_DB_NAME
             - POSTGRESQL_USERNAME
             - POSTGRESQL_PASSWORD
+            - API_USER
+            - API_PASS
         networks:
             - oxford-talks_net
         depends_on:
