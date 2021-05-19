@@ -30,7 +30,7 @@ services:
             - evac-sim_net
 
     oxford-talks:
-        image: registry.gitlab.com/hitchhiker90/oxford-talks/main/oxford-talks:latest
+        image: registry.gitlab.com/hitchhiker90/oxford-talks/main/events-api:latest
         environment:
             - POSTGRESQL_HOST
             - POSTGRESQL_DB_NAME
